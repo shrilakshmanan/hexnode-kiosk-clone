@@ -1,33 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+/**
+ * App Component
+ * 
+ * This is the main application component that serves as the root of the application.
+ * It includes various sections and components that make up the Hexnode Kiosk Clone webpage.
+ * 
+ * Author: SL
+ */
 
+import MNCBanner from "./components/MNCBanner"
+import Footer from "./components/Footer"
+import Header from "./components/Header"
+import KioskBanner from "./components/KioskBanner"
+import KioskMode from "./components/KioskModeAccordion"
+import KioskModesSection from "./components/KioskModesSection"
+import LogoCarousel from "./components/LogoCarousel"
+import PlatformsSupported from "./components/PlatformsSupported"
+import SignUpSection from "./components/SignUpSection"
+import Testimonals from "./components/Testimonals"
+
+/**
+ * App is the main application component that serves as the root of the application.
+ * It returns a JSX element that contains all the sections and components that make up the Hexnode Kiosk Clone webpage.
+ * The sections include the header, kiosk banner, accolades banner, kiosk modes section, kiosk mode accordion, customer testimonals slider, logo slider, platforms supported section, sign up section, and the footer.
+ * @returns {ReactElement} The main application component.
+ */
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <Header />
+      <KioskBanner />
+      <MNCBanner />
+      <KioskModesSection />
+      <KioskMode />
+      <Testimonals />
+      <LogoCarousel />
+      <PlatformsSupported />
+      <SignUpSection />
+      <Footer />
     </>
   )
 }

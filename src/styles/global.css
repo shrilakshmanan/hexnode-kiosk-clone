@@ -1,0 +1,23 @@
+/**
+ * Global Styles
+ * 
+ * Author: SL
+ * 
+ * This stylesheet contains global styles for the application.
+ * It includes imports, custom styles, and utility classes.
+ * 
+ * Tailwind CSS is used for styling, with custom additions.
+ */
+
+/* Add any additional global styles or utility classes below */
+
+@import "tailwindcss";
+
+.custom-scrollbar-hide {
+    scrollbar-width: none; 
+  }
+  .custom-scrollbar-hide::-webkit-scrollbar {
+    display: none; 
+  }
+
+ 
